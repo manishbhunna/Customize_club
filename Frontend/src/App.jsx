@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -10,16 +11,19 @@ import Footer from "./components/Footer";
 import CartPage from "./components/CartPage";
 import LoginPage from "./components/LoginPage";
 import PaymentSuccess from "./components/PaymentSuccess";
-import ProductLIst from "./components/ProductLIst";
 import MenCollections from "./components/MenCollections";
 import Hampers from "./components/Hampers";
 import WomenCollections from "./components/WomenCollections";
+import Term_conditions from "./components/Policies/Term_conditions";
+import PrivacyPolicy from "./components/Policies/PrivacyPolicy";
+import ReturnPolicy from "./components/Policies/ReturnPolicy";
+import CustomerQuery from "./components/CustomerQuery";
 
 function App() {
 
   return (
   <>
-    <Router>
+    <Router >
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -30,7 +34,15 @@ function App() {
         <Route path="/women" element={<WomenCollections showAll={true}/>}/>
         <Route path="/hampers" element={<Hampers showAll={true}/>}/>
          <Route path="/success" element={<PaymentSuccess/>} />
+           <Route path="/Term&Condtions" element={<Term_conditions/>} />
+             <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
+               <Route path="/ReturnPolicy" element={<ReturnPolicy/>} />
+                  <Route path="/Contactus" element={ <CustomerQuery/>} />
+
+
       </Routes>
+      
+      
 
       <Footer></Footer>
       

@@ -5,7 +5,6 @@ import { addToCart } from "../../Redux/cartSlice"; // Update path as needed
 
 const UserInput = ({ product }) => {
   const dispatch = useDispatch();
-   const { name } = useParams();
      const navigate = useNavigate();
   
   // Sabhi input values store karne ke liye state
@@ -22,7 +21,7 @@ const UserInput = ({ product }) => {
   // Form submit handle
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("User Values:", formData); // yahan values console par print hongi
+    alert("User Values:", formData); // yahan values  print hongi
   };
 
   return (
@@ -74,19 +73,27 @@ const UserInput = ({ product }) => {
       </div>
 
       {/* Buttons */}
-      <button type="button" className="btn btn-primary w-100 fw-bold mt-2"  
-      onClick={() => navigate("/cart", { state: { product } })}  // ✅ navigate with product
-  >
-        Buy Now
-      </button>
-
-      <button
+     <button
   type="button"
-  className="btn btn-warning w-100 fw-bold mt-2"
+  className="btn btn-primary w-100 fw-bold mt-2"
   onClick={() => {
     dispatch(addToCart({
       ...product,
       userInputs: formData,
+      Productid:product.id
+    }));
+
+    navigate("/cart");
+  }}
+>
+  Buy Now
+</button>
+
+      <button type="button"  className="btn btn-warning w-100 fw-bold mt-2"
+  onClick={() => {
+    dispatch(addToCart({
+      ...product, 
+           userInputs: formData,
       Productid:product.id
     }));
     alert("Item added to cart ✅");

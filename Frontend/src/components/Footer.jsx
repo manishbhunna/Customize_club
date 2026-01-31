@@ -1,6 +1,5 @@
-import React from "react";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
-import { GiIndiaGate } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 
 const Footer = () => {
@@ -12,10 +11,10 @@ const Footer = () => {
           <div className="col-md-3">
             <h5>Follow Us</h5>
             <div className="d-flex gap-3 mt-3">
-              <a href="#" className="footer-link text-white">
+              <a href="https://www.instagram.com/customize__club/" className="footer-link text-white">
                 <FaInstagram size={28} />
               </a>
-              <a href="#" className="footer-link text-white">
+              <a href="https://wa.me/918053247035"className="footer-link text-white">
                 <FaWhatsapp size={28} />
               </a>
             </div>
@@ -35,19 +34,31 @@ const Footer = () => {
             <h5>Policies</h5>
             <ul className="list-unstyled mt-3">
               <li>
-                <a href="term.html" className="footer-link text-white">
+                <Link 
+                to='/Term&Condtions'>
+                  <a href="term.html" className="footer-link text-white">
                   Terms & Conditions
                 </a>
+                </Link>
+              
               </li>
               <li>
-                <a href="privacy.html" className="footer-link text-white">
+                <Link 
+                to='/PrivacyPolicy'>
+                  <a href="privacy.html" className="footer-link text-white">
                   Privacy Policy
                 </a>
+                </Link>
+                
               </li>
               <li>
+                 <Link 
+                to='/ReturnPolicy'>
+                  
                 <a href="Return Policy.html" className="footer-link text-white">
                   Return Policy
                 </a>
+                 </Link>
               </li>
             </ul>
           </div>
@@ -57,9 +68,12 @@ const Footer = () => {
             <h5>Support</h5>
             <ul className="list-unstyled mt-3">
               <li>
-                <a href="help.html" className="footer-link text-white">
+                <Link to="/Contactus">
+                 <a href="help.html" className="footer-link text-white">
                   Contact Us
                 </a>
+                </Link>
+               
               </li>
             </ul>
           </div>

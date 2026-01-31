@@ -2,7 +2,8 @@ import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const ProductView = ({ product }) => {
-  const [mainImage, setmainimage] = useState(product.images[0]);
+  const [mainImage, setmainimage] = useState(product.images[0]
+  );  
   const [activeIndex, setActiveIndex] = useState(0);
 
 
@@ -13,7 +14,7 @@ const ProductView = ({ product }) => {
   {/* Main Image */}
   <div className="border rounded-3 p-0 shadow-sm zoom-effect mb-3">
     <img
-      src={mainImage}
+      src={`/Customize_club/${mainImage}`}
       className="img-fluid rounded-2 w-100"
       id="mainImage"
       alt="Custom Leather Wallet"
@@ -23,52 +24,58 @@ const ProductView = ({ product }) => {
   {/* Thumbnails Grid */}
   <div className="row g-2 mt-2">
     <div className="col-6 col-md-4">
-      <img
-        onClick={() => setmainimage(product.images[1])}
-        src={product.images[1]}
-        className="img-fluid rounded-2 cursor-pointer w-100"
-        alt="Main Image"
-      />
+    <img
+  onClick={() => setmainimage(`/Customize_club/${product.images[1]}`)}
+  src={`/Customize_club/${product.images[1]}`}
+  className="img-fluid rounded-2 cursor-pointer w-100"
+  alt="Main Image"
+/>
+
     </div>
     <div className="col-6 col-md-4">
-      <img
-        onClick={() => setmainimage(product.images[2])}
-        src={product.images[2]}
-        className="img-fluid rounded-2 cursor-pointer w-100"
-        alt="Inner View"
-      />
+    <img
+  onClick={() => setmainimage(`/Customize_club/${product.images[2]}`)}
+  src={`/Customize_club/${product.images[2]}`}
+  className="img-fluid rounded-2 cursor-pointer w-100"
+  alt="Main Image"
+/>
+
     </div>
     <div className="col-6 col-md-4">
-      <img
-        onClick={() => setmainimage(product.images[3])}
-        src={product.images[3]}
-        className="img-fluid rounded-2 cursor-pointer w-100"
-        alt="Colours"
-      />
+    <img
+  onClick={() => setmainimage(`/Customize_club/${product.images[3]}`)}
+  src={`/Customize_club/${product.images[3]}`}
+  className="img-fluid rounded-2 cursor-pointer w-100"
+  alt="Main Image"
+/>
+
     </div>
     <div className="col-6 col-md-4">
-      <img
-        onClick={() => setmainimage(product.images[4])}
-        src={product.images[4]}
-        className="img-fluid rounded-2 cursor-pointer w-100"
-        alt="Main image"
-      />
+    <img
+  onClick={() => setmainimage(`/Customize_club/${product.images[4]}`)}
+  src={`/Customize_club/${product.images[4]}`}
+  className="img-fluid rounded-2 cursor-pointer w-100"
+  alt="Main Image"
+/>
+
     </div>
     <div className="col-6 col-md-4">
-      <img
-        onClick={() => setmainimage(product.images[5])}
-        src={product.images[5]}
-        className="img-fluid rounded-2 cursor-pointer w-100"
-        alt="Charm Options"
-      />
+    <img
+  onClick={() => setmainimage(`/Customize_club/${product.images[5]}`)}
+  src={`/Customize_club/${product.images[5]}`}
+  className="img-fluid rounded-2 cursor-pointer w-100"
+  alt="Main Image"
+/>
+
     </div>
     <div className="col-6 col-md-4">
-      <img
-        onClick={() => setmainimage(product.images[6])}
-        src={product.images[6]}
-        className="img-fluid rounded-2 cursor-pointer w-100"
-        alt="Extra View"
-      />
+    <img
+  onClick={() => setmainimage(`/Customize_club/${product.images[6]}`)}
+  src={`/Customize_club/${product.images[6]}`}
+  className="img-fluid rounded-2 cursor-pointer w-100"
+  alt="Main Image"
+/>
+
     </div>
   </div>
 </div>
@@ -84,7 +91,7 @@ const ProductView = ({ product }) => {
               className={`carousel-item ${index === activeIndex ? "active" : ""}`}
             >
               <img
-                src={img}
+                src={`/Customize_club/${img}`}
                 className="d-block w-100 img-fluid"
                 alt={`Product ${index}`}
               />
@@ -120,7 +127,7 @@ const ProductView = ({ product }) => {
         {product.images.map((img, index) => (
           <img
             key={index}
-            src={img}
+            src={`/Customize_club/${img}`}
             alt={`Thumb ${index}`}
             onClick={() => setActiveIndex(index)}
             className={`img-thumbnail cursor-pointer ${

@@ -7,7 +7,7 @@ const Header = () => {
     <>
       {/* WhatsApp Info Bar */}
       <div className="text-center whatsapphead py-1" style={{ fontSize: "13px" }}> 
-        Whatsapp us +9194671-91644 (10AM-8PM)
+        Whatsapp us +9180532-47035 (10AM-8PM)
       </div>
 
       {/* Navbar */}

@@ -3,7 +3,7 @@ import React from "react";
 const WhatsAppButton = () => {
   return (
     <a
-      href="https://wa.me/919467191644"  // ✅ Country code +91 ke sath
+      href="https://wa.me/918053247035"  // ✅ Country code +91 ke sath
       target="_blank"
       rel="noopener noreferrer"
       style={{

@@ -7,7 +7,8 @@ const HeroSection = () => {
         id="header"
         className="container-fluid position-relative d-flex align-items-center"
         style={{
-          backgroundImage: "url('/photos/banner3.jpeg')", // अपनी image का path यहाँ डालें
+          backgroundImage: "url(/Customize_club/photos/banner3.jpeg)", // direct path
+           // अपनी image का path यहाँ डालें
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "100vh",

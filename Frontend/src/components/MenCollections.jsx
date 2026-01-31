@@ -18,7 +18,7 @@ const MenCollections = ({showAll}) => {
                 >
                   {/* Product Image */}
                   <img
-                    src={item.images[0]}
+                    src={`/Customize_club/${item.images[0]}`}
                     className="card-img-top product-img p-2 rounded-3"
                     alt={item.name}
                   />

@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import AddressPage from "./AddressPage";
 import PayNowButton from "../components/ProductDetails/PayNowButton";
 import { addToCart, updateQty, removeFromCart } from "../Redux/cartSlice";
+import { saveorderdata } from "../Redux/userdetails";
 
 const CartPage = () => {
   const location = useLocation();
@@ -56,14 +57,16 @@ const CartPage = () => {
       return;
     }
 
-    const orderData = {
+    const userorderData = {
       address,
       cart,
       totalAmount,
     };
 
-    console.log("Order Placed ✅:", orderData);
+    console.log("Order Placed ✅:", userorderData);
     setDataField(true);
+
+    dispatch(saveorderdata(userorderData));
   };
 
   return (
@@ -90,7 +93,7 @@ const CartPage = () => {
                     <Card.Body>
                       <Row className="align-items-center">
                         <Col xs={4} sm={3} className="text-center">
-                          <Image src={item.images?.[0] || item.img} alt={item.name} fluid rounded />
+                          <Image src={`/Customize_club/${item.images?.[0]}` || item.img} alt={item.name} fluid rounded />
                         </Col>
                         <Col xs={8} sm={4}>
                           <h6>{item.name}</h6>

@@ -10,7 +10,7 @@ const AboutItem = ({ product }) => {
         <div className="row align-items-center mb-5">
           <div className="col-12 col-md-6 mb-4 mb-md-0">
             <img
-              src={product.images[0]}
+              src={`/Customize_club/${product.images[0]}`}
               className="img-fluid w-100"
               alt={product.longDescription.tittle[0]}
             />
@@ -25,7 +25,7 @@ const AboutItem = ({ product }) => {
         <div className="row align-items-center mb-5 flex-column flex-md-row-reverse">
           <div className="col-12 col-md-6 mb-4 mb-md-0">
             <img
-              src={product.images[1]}
+              src={`/Customize_club/${product.images[1]}`}
               className="img-fluid w-100"
               alt={product.longDescription.tittle[1]}
             />
@@ -40,7 +40,7 @@ const AboutItem = ({ product }) => {
         <div className="row align-items-center mb-5">
           <div className="col-12 col-md-6 mb-4 mb-md-0">
             <img
-              src={product.images[2]}
+              src={`/Customize_club/${product.images[2]}`}
               className="img-fluid w-100"
               alt={product.longDescription.tittle[2]}
             />
@@ -55,9 +55,9 @@ const AboutItem = ({ product }) => {
         <div className="row align-items-center mb-5 flex-column flex-md-row-reverse">
           <div className="col-12 col-md-6 mb-4 mb-md-0">
             <img
-              src={product.images[5]}
+              src={`/Customize_club/${product.images[5]}`}
               className="img-fluid w-100"
-              alt={product.longDescription.tittle[3]}
+              alt={product.longDescription.tittle[5]}
             />
           </div>
           <div className="col-12 col-md-6 fs-5">

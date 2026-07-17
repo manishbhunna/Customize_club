@@ -25,7 +25,7 @@ const PaymentSuccess = () => {
 
         <button
           className="btn btn-primary w-100 mt-3"
-          onClick={() => (window.location.href = "/")}
+          onClick={() => (window.location.href = "/Customize_club/")}
         >
           Back to Home
         </button>
